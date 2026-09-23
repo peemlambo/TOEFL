@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOEFL iBT 2026 — Full Mock Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#7A0C1E; --navy-2:#570815; --gold:#6E6E6E; --gold-2:#4D4D4D;
+  --bg:#f5f5f5; --panel:#ffffff; --ink:#232323; --sub:#6b6b6b; --line:#dcdcdc;
+  --good:#2e7d4f; --bad:#b3392c; --shadow: 0 8px 24px rgba(122,12,30,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1a1414; --panel:#241c1c; --ink:#f0eceb; --sub:#b9b0af; --line:#3a2f2f;
+    --navy:#b3324a; --gold:#a8a8a8; --shadow: 0 8px 24px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1a1414; --panel:#241c1c; --ink:#f0eceb; --sub:#b9b0af; --line:#3a2f2f;
+  --navy:#b3324a; --gold:#a8a8a8; --shadow: 0 8px 24px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  min-height:100vh;
+}
+.topbar{
+  background:var(--navy); color:#fff; padding:14px 20px;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  position:sticky; top:0; z-index:50; box-shadow:var(--shadow);
+}
+.topbar .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px;}
+.topbar .brand .badge{
+  background:var(--gold); color:var(--navy-2); font-size:11px; font-weight:700;
+  padding:3px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:.5px;
+}
+.topbar .mid{font-size:13px; opacity:.9; text-align:center; flex:1;}
+.timer{
+  font-variant-numeric:tabular-nums; background:rgba(255,255,255,.12);
+  padding:6px 12px; border-radius:8px; font-weight:600; font-size:14px; min-width:70px; text-align:center;
+}
+.timer.low{background:var(--bad); animation:pulse 1s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.6;}}
+.themebtn{background:transparent; border:1px solid rgba(255,255,255,.4); color:#fff; border-radius:6px; padding:5px 9px; cursor:pointer; font-size:12px;}
+.progress-wrap{background:var(--panel); border-bottom:1px solid var(--line); padding:8px 20px;}
+.progress-track{height:6px; background:var(--line); border-radius:4px; overflow:hidden;}
+.progress-fill{height:100%; background:linear-gradient(90deg,var(--gold),var(--navy)); transition:width .4s ease;}
+.progress-label{font-size:12px; color:var(--sub); margin-top:6px; display:flex; justify-content:space-between;}
+main{max-width:880px; margin:0 auto; padding:28px 20px 100px;}
+.card{
+  background:var(--panel); border:1px solid var(--line); border-radius:14px;
+  padding:28px 30px; box-shadow:var(--shadow); margin-bottom:20px;
+}
+h1.hero{font-family:'Source Serif 4',serif; font-size:30px; color:var(--navy); margin:0 0 8px;}
+:root[data-theme="dark"] h1.hero, @media (prefers-color-scheme:dark){h1.hero{color:var(--gold);}}
+h2.section-title{
+  font-family:'Source Serif 4',serif; font-size:22px; color:var(--navy); margin:0 0 4px;
+}
+.eyebrow{
+  text-transform:uppercase; letter-spacing:1px; font-size:11px; font-weight:700; color:var(--gold-2);
+  margin-bottom:6px; display:block;
+}
+.sub{color:var(--sub); font-size:14px; margin:0 0 18px; line-height:1.5;}
+p.lead{color:var(--sub); line-height:1.6;}
+.passage{
+  font-family:'Source Serif 4',serif; font-size:17px; line-height:1.75; color:var(--ink);
+  background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:20px 22px; margin:14px 0;
+}
+.passage blank{
+  display:inline-block; border-bottom:2px solid var(--gold-2); min-width:70px; text-align:center; font-weight:600;
+}
+.qblock{margin:22px 0; padding-top:18px; border-top:1px dashed var(--line);}
+.qblock:first-child{border-top:none; padding-top:0;}
+.qnum{font-weight:700; color:var(--navy); margin-bottom:8px;}
+:root[data-theme="dark"] .qnum, @media (prefers-color-scheme:dark){.qnum{color:var(--gold);}}
+.qtext{margin-bottom:12px; line-height:1.55;}
+.opt{
+  display:flex; align-items:flex-start; gap:10px; padding:11px 14px; border:1px solid var(--line);
+  border-radius:9px; margin-bottom:9px; cursor:pointer; transition:.15s; background:var(--panel);
+}
+.opt:hover{border-color:var(--gold);}
+.opt.selected{border-color:var(--navy); background:rgba(31,56,100,.06); font-weight:600;}
+:root[data-theme="dark"] .opt.selected, @media (prefers-color-scheme:dark){.opt.selected{background:rgba(211,172,118,.1); border-color:var(--gold);}}
+.opt input{margin-top:3px;}
+input[type=text].blankinput{
+  border:none; border-bottom:2px solid var(--gold-2); background:transparent; font-family:'Source Serif 4',serif;
+  font-size:16px; color:var(--ink); width:110px; padding:2px 4px; outline:none; text-align:center;
+}
+textarea{
+  width:100%; min-height:160px; border:1px solid var(--line); border-radius:10px; padding:14px;
+  font-family:'IBM Plex Sans',sans-serif; font-size:15px; line-height:1.6; resize:vertical; background:var(--panel); color:var(--ink);
+}
+.audio-panel{
+  display:flex; align-items:center; gap:14px; background:var(--bg); border:1px solid var(--line);
+  border-radius:10px; padding:16px 18px; margin:14px 0;
+}
+.audio-panel .icon{font-size:26px;}
+.audio-panel .info{flex:1;}
+.audio-panel .info b{display:block; margin-bottom:2px;}
+.audio-panel .info span{font-size:13px; color:var(--sub);}
+button{
+  font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:14px; cursor:pointer;
+  border-radius:9px; padding:11px 20px; border:none; transition:.15s;
+}
+.btn-primary{background:var(--navy); color:#fff;}
+.btn-primary:hover{background:var(--navy-2);}
+.btn-primary:disabled{opacity:.45; cursor:not-allowed;}
+.btn-gold{background:var(--gold); color:var(--navy-2);}
+.btn-gold:hover{background:var(--gold-2); color:#fff;}
+.btn-ghost{background:transparent; border:1px solid var(--line); color:var(--ink);}
+.btn-ghost:hover{border-color:var(--navy);}
+.btn-danger{background:var(--bad); color:#fff;}
+.footer-nav{
+  position:sticky; bottom:0; background:var(--panel); border-top:1px solid var(--line);
+  padding:14px 20px; display:flex; justify-content:space-between; gap:10px; max-width:880px; margin:0 auto;
+  box-shadow:0 -6px 20px rgba(0,0,0,.05);
+}
+.rec-indicator{display:flex; align-items:center; gap:8px; font-size:14px; color:var(--bad); font-weight:600;}
+.rec-dot{width:10px; height:10px; border-radius:50%; background:var(--bad); animation:pulse .8s infinite;}
+.tag{display:inline-block; font-size:11px; font-weight:700; padding:3px 9px; border-radius:20px; text-transform:uppercase; letter-spacing:.4px;}
+.tag.hard{background:#f4d6d1; color:#8a2e20;}
+.tag.easy{background:#d7ecd9; color:#1f6b34;}
+:root[data-theme="dark"] .tag.hard, @media(prefers-color-scheme:dark){.tag.hard{background:#4a2620; color:#f4b9ae;}}
+:root[data-theme="dark"] .tag.easy, @media(prefers-color-scheme:dark){.tag.easy{background:#1e3a24; color:#a9dbb3;}}
+.scorecard{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:18px 0;}
+.scorebox{background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:16px; text-align:center;}
+.scorebox .n{font-size:28px; font-weight:700; color:var(--navy);}
+:root[data-theme="dark"] .scorebox .n, @media(prefers-color-scheme:dark){.scorebox .n{color:var(--gold);}}
+.scorebox .l{font-size:12px; color:var(--sub); text-transform:uppercase; letter-spacing:.5px;}
+.center{text-align:center;}
+.mini{font-size:12px; color:var(--sub);}
+.wordbank{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0;}
+.chip{
+  background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:8px 14px; cursor:pointer;
+  font-family:'Source Serif 4',serif; font-size:15px; user-select:none;
+}
+.chip.used{opacity:.35; cursor:default;}
+.sentence-slot{
+  min-height:52px; border:2px dashed var(--line); border-radius:10px; padding:10px; display:flex; flex-wrap:wrap;
+  gap:8px; align-items:center; margin-bottom:10px; background:var(--bg);
+}
+.sentence-slot .chip{background:var(--panel); border-color:var(--gold-2);}
+ul.disc-thread{list-style:none; padding:0; margin:14px 0;}
+ul.disc-thread li{
+  background:var(--bg); border-left:3px solid var(--gold-2); border-radius:0 8px 8px 0;
+  padding:12px 16px; margin-bottom:10px;
+}
+ul.disc-thread li b{color:var(--navy);}
+:root[data-theme="dark"] ul.disc-thread li b, @media(prefers-color-scheme:dark){ul.disc-thread li b{color:var(--gold);}}
+.hidden{display:none !important;}
+.welcome-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:20px 0;}
+.welcome-grid .wcard{background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:14px; text-align:center;}
+.welcome-grid .wcard .t{font-weight:700; color:var(--navy); font-size:13px;}
+:root[data-theme="dark"] .welcome-grid .wcard .t, @media(prefers-color-scheme:dark){.welcome-grid .wcard .t{color:var(--gold);}}
+.welcome-grid .wcard .m{font-size:12px; color:var(--sub); margin-top:3px;}
+@media (max-width:640px){.welcome-grid{grid-template-columns:1fr 1fr;} .card{padding:20px 18px;}}
+.wordcount{font-size:12px; color:var(--sub); text-align:right; margin-top:6px;}
+.interview-q{font-family:'Source Serif 4',serif; font-size:20px; text-align:center; padding:30px 10px; color:var(--navy);}
+:root[data-theme="dark"] .interview-q, @media(prefers-color-scheme:dark){.interview-q{color:var(--gold);}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span>TOEFL iBT</span><span class="badge">2026 Format</span></div>
+  <div class="mid" id="sectionLabel">Welcome</div>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <div class="timer" id="timerDisplay">—:—</div>
+    <button class="themebtn" id="themeToggle">◐</button>
+  </div>
+</div>
+<div class="progress-wrap">
+  <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  <div class="progress-label"><span id="progressText">Not started</span><span id="progressPct">0%</span></div>
+</div>
+
+<main id="app"></main>
+
+<div class="footer-nav" id="footerNav" style="display:none;">
+  <button class="btn-ghost" id="prevBtn">← Back</button>
+  <div id="footerCenter" style="display:flex; align-items:center;"></div>
+  <button class="btn-primary" id="nextBtn">Next →</button>
+</div>
+
+<script>
+/* ============================= THEME ============================= */
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.onclick = ()=>{
+  const cur = document.documentElement.getAttribute('data-theme');
+  document.documentElement.setAttribute('data-theme', cur==='dark' ? 'light' : 'dark');
+};
+
+/* ============================= CONTENT DATA ============================= */
+const CONTENT = {
+
+readingM1: [
+  {
+    type:'complete-words', id:'r1',
+    title:'Complete the Words', eyebrow:'Reading · Task 1 of 3',
+    instructions:'Type the missing letters to complete each word based on context. Each blank is one word.',
+    passage:[
+      "Scientists have long known that sleep plays a critical role in learning, but recent rese_rch has clarified exactly how. During deep sleep, the br__n replays the electrical patterns that were active while a person was learning something new, essentially rehear_ing the experience without conscious awa_eness.",
+      "This process, known as memory conso_idation, appears to strengthen the neural connections formed during the day and tra_sfer information from a temporary storage area to a more per_anent one. Researchers found that participants who slept eight hours after training on a task performed significa_tly better the next day than those who stayed awake the same number of hours."
+    ],
+    blanks:['research','brain','rehearsing','awareness','consolidation','transfer','permanent','significantly']
+  },
+  {
+    type:'mcq-passage', id:'r2',
+    title:'Read in Daily Life', eyebrow:'Reading · Task 2 of 3',
+    instructions:'Read the memo, then answer the questions.',
+    passage:[
+      "MEMO — Chemistry 101 Laboratory Relocation",
+      "To: All Chemistry 101 students\nFrom: Office of the Chemistry Department\nRe: Room change for lab sections",
+      "Due to renovation work in the Hendricks Science Building, all Chemistry 101 laboratory sections will move to the Overton Annex, Room 220, beginning Monday, October 6. Lecture meetings are not affected and will continue in Hendricks 110 as scheduled.",
+      "Students should bring their lab notebooks and safety goggles to the new location. Lockers currently assigned in Hendricks will remain accessible until October 10 for students to retrieve stored equipment; after that date, any remaining items will be transferred to the department office.",
+      "Please direct questions to the Chemistry Department office, not to individual lab instructors, as scheduling for the Annex is being coordinated centrally."
+    ],
+    questions:[
+      {q:'What is the main purpose of this memo?', opts:['To cancel Chemistry 101 lab sections','To announce a new location for lab sections','To introduce a new safety policy','To reschedule lecture meetings'], a:1},
+      {q:'According to the memo, what will NOT change?', opts:['The lab room number','The building for labs','The lecture location','The lab start date'], a:2},
+      {q:'What should a student do with items left in a Hendricks locker after October 10?', opts:['Nothing is said about this','They will be discarded','They will be transferred to the department office','They must be picked up before October 6'], a:2},
+      {q:'Who should students contact with questions about the move?', opts:['Their individual lab instructor','The Overton Annex front desk','The Chemistry Department office','The Office of the Registrar'], a:2}
+    ]
+  },
+  {
+    type:'mcq-passage', id:'r3',
+    title:'Read an Academic Text', eyebrow:'Reading · Task 3 of 3',
+    instructions:'Read the passage, then answer the questions.',
+    passage:[
+      "The Bystander Effect",
+      "In 1964, a young woman named Kitty Genovese was attacked near her apartment building in New York City while, according to initial newspaper reports, numerous neighbors reportedly heard or witnessed the attack without intervening. Although later investigations complicated the original account, the case prompted psychologists John Darley and Bibb Latané to investigate a phenomenon that has since become known as the bystander effect: the tendency for individuals to be less likely to offer help to a victim when other people are present.",
+      "Darley and Latané proposed that the presence of others produces a 'diffusion of responsibility.' When only one bystander is present, that person bears the full weight of responsibility for helping. When many bystanders are present, each individual may assume that someone else will act, or has already acted, reducing the perceived personal obligation to intervene. In a series of experiments, the researchers found that subjects were significantly slower to report an apparent emergency, or failed to report it at all, when they believed other people were also aware of the situation.",
+      "A second explanation involves social influence: in ambiguous situations, people often look to the reactions of others to determine whether a situation is truly an emergency. If bystanders appear calm, an individual may conclude, often incorrectly, that intervention is unnecessary. This effect helps explain why the presence of a crowd can inhibit helping even when a crowd, in principle, has greater collective capacity to help.",
+      "Understanding the bystander effect has practical implications. Trainers in emergency response and workplace safety now often teach a specific countermeasure: singling out one bystander directly, for example by making eye contact and assigning a specific task such as 'You, call an ambulance,' which counteracts diffusion of responsibility by assigning clear, individual responsibility."
+    ],
+    questions:[
+      {q:'According to the passage, what is the "bystander effect"?', opts:['The tendency for crowds to panic during emergencies','The tendency for individuals to help more when others are present','The tendency for individuals to be less likely to help when others are present','The tendency for witnesses to misremember events'], a:2},
+      {q:'The phrase "diffusion of responsibility" refers to which idea?', opts:['Responsibility is legally shared among all witnesses','Each bystander assumes someone else will act','Bystanders are unaware anyone needs help','Responsibility increases as group size increases'], a:1},
+      {q:'Why might bystanders in an ambiguous situation fail to act, according to paragraph 3?', opts:['They are physically unable to help','They misjudge the emergency by observing others’ calm reactions','They are legally prohibited from intervening','They cannot see the emergency clearly'], a:1},
+      {q:'What countermeasure do emergency response trainers recommend?', opts:['Calling for help only after a delay','Assigning a specific task to a specific bystander','Asking the whole crowd to act together','Avoiding eye contact with bystanders'], a:1},
+      {q:'What is this passage primarily about?', opts:['A single historical crime and its investigation','A psychological phenomenon, its causes, and a practical countermeasure','A comparison of urban and rural helping behavior','A critique of 1960s newspaper reporting'], a:1}
+    ]
+  }
+],
+
+readingM2Hard: {
+  type:'mcq-passage', id:'r-hard', tag:'hard',
+  title:'Read an Academic Text (Module 2 — Higher Level)', eyebrow:'Reading · Module 2',
+  instructions:'Read the passage, then answer the questions.',
+  passage:[
+    "Chaos Theory and the Butterfly Effect",
+    "Chaos theory examines how small differences in the initial conditions of a dynamical system can produce widely divergent outcomes, a property known as sensitive dependence on initial conditions. The term 'butterfly effect,' popularized by meteorologist Edward Lorenz, illustrates this idea: in principle, a minuscule atmospheric disturbance, such as the flap of a butterfly's wings, could influence the eventual path of a distant storm weeks later.",
+    "Lorenz first observed this property in 1961 while running a computer model of weather patterns. Intending to re-examine a previous simulation, he re-entered a set of numbers from a printout, rounding them to three decimal places instead of the six his program had originally used internally. The resulting simulation diverged dramatically from the original within a short simulated time, despite the rounding difference being minute. This finding, initially assumed to be a computational error, led Lorenz to conclude that long-range weather forecasting has inherent limits: because atmospheric measurements can never be perfectly precise, and because the errors compound rapidly, forecasts beyond roughly two weeks are fundamentally unreliable, not merely limited by current technology.",
+    "Chaotic systems are not random; they are governed by deterministic equations, meaning that, in principle, a given set of initial conditions always produces the same outcome. What makes them unpredictable in practice is that any two starting points, however close, will eventually diverge exponentially. This distinguishes chaos from true randomness and has made chaos theory applicable well beyond meteorology, including in fields such as population biology, fluid dynamics, and even cardiac rhythm analysis, wherever systems exhibit extreme sensitivity to small perturbations."
+  ],
+  questions:[
+    {q:'What does "sensitive dependence on initial conditions" mean, as used in the passage?', opts:['Systems require very precise initial measurements to build at all','Tiny differences at the start of a process can lead to very different outcomes later','Systems are inherently random and cannot be modeled','Weather systems are more sensitive than other dynamical systems'], a:1},
+    {q:'What originally caused Lorenz to discover this property?', opts:['A butterfly interfered with his equipment','He rounded numbers differently when re-entering data into his model','His computer malfunctioned during a routine test','He intentionally introduced random errors to test the model'], a:1},
+    {q:'According to the passage, why are long-range forecasts beyond two weeks considered unreliable?', opts:['Weather satellites are not accurate enough yet','Measurement errors compound rapidly in a chaotic system','Meteorologists lack sufficient computing power','Lorenz’s model was never validated'], a:1},
+    {q:'How does the passage distinguish chaotic systems from truly random ones?', opts:['Chaotic systems are governed by deterministic equations despite appearing unpredictable','Chaotic systems only occur in computer simulations','Random systems are more common in nature','Chaotic systems cannot be described mathematically'], a:0},
+    {q:'Which of the following fields does the passage mention as an application of chaos theory?', opts:['Cardiac rhythm analysis','Archaeology','Linguistics','Astronomy'], a:0}
+  ]
+},
+readingM2Easy: {
+  type:'mcq-passage', id:'r-easy', tag:'easy',
+  title:'Read in Daily Life (Module 2 — Standard Level)', eyebrow:'Reading · Module 2',
+  instructions:'Read the text messages, then answer the questions.',
+  passage:[
+    "Text Messages",
+    "Mia: Hey, are we still meeting at the library at 4 for the group project?",
+    "Tom: Yeah, but can we push it to 4:30? I have a quick meeting with my advisor that's running late.",
+    "Mia: Sure, no problem. Should I go ahead and reserve the study room, or do you want to?",
+    "Tom: If you're already near there, go for it. I'll bring my laptop and the notes from last time.",
+    "Mia: Sounds good. I'll grab room 3B if it's free — that's the one with the whiteboard.",
+    "Tom: Perfect. Also, did Priya say if she's coming? She wasn't in class today.",
+    "Mia: She texted me earlier, she's coming straight from work so she might be a few minutes late too.",
+    "Tom: Okay, good to know. See you at 4:30."
+  ],
+  questions:[
+    {q:'Why does Tom want to push the meeting time back?', opts:['He is stuck in traffic','He has a meeting with his advisor','He forgot about the meeting','He is finishing another class'], a:1},
+    {q:'What does Mia offer to do?', opts:['Bring the laptop','Reserve the study room','Contact Priya','Cancel the meeting'], a:1},
+    {q:'Why does Mia want room 3B specifically?', opts:['It is the biggest room','It has a whiteboard','It is closest to the entrance','It was already reserved'], a:1},
+    {q:'What do we learn about Priya?', opts:['She cannot come at all','She will arrive a little late','She already arrived','She is bringing the notes'], a:1}
+  ]
+},
+
+listeningM1: [
+  {
+    type:'listen-choose', id:'l1', eyebrow:'Listening · Task 1 of 4',
+    title:'Listen and Choose a Response',
+    instructions:'Listen to the short exchange, then choose the best response. Audio plays once.',
+    script:"Woman: Excuse me, do you know if the shuttle to the parking garage stops here, or is this the wrong stop?",
+    questions:[
+      {q:'What would be the most appropriate response?', opts:["It stops right here, actually — should be along in a few minutes.","I don't like taking the shuttle.","The parking garage is closed today.","Yes, I drove here today."], a:0}
+    ]
+  },
+  {
+    type:'listen-conversation', id:'l2', eyebrow:'Listening · Task 2 of 4',
+    title:'Listen to a Conversation', tag2:'Student & Academic Advisor',
+    instructions:'Listen to the conversation, then answer the questions. Audio plays once.',
+    script:"Advisor: Come on in — you wanted to talk about next semester's schedule?\nStudent: Yes, thank you. I'm trying to decide whether to take Organic Chemistry and Statistics in the same semester, or spread them out.\nAdvisor: That's a common question. Both are demanding courses. What's your reasoning for wanting to take them together?\nStudent: Mainly that I'd like to apply to the summer research program, and it requires both courses completed beforehand.\nAdvisor: I see. Well, if that program is a real priority, taking them together is doable, but I'd recommend dropping one other course to keep your total credit load manageable. Do you have any electives you could postpone?\nStudent: Actually yes — I was planning to take an art history elective, but that's not required until next year.\nAdvisor: That sounds like a reasonable trade-off. I'd support that plan, as long as you're prepared to prioritize study time for the two science courses.\nStudent: That makes sense. Thank you, that's really helpful.",
+    questions:[
+      {q:'Why does the student visit the advisor?', opts:['To drop out of Organic Chemistry','To discuss scheduling for next semester','To apply for the summer research program directly','To complain about a professor'], a:1},
+      {q:'Why does the student want to take both demanding courses in the same semester?', opts:['They are only offered together','A summer research program requires both first','Her friends are taking them together','It fits her graduation requirements only that way'], a:1},
+      {q:'What does the advisor recommend?', opts:['Taking neither course this semester','Dropping the art history elective to reduce the load','Postponing both science courses','Switching to a different research program'], a:1},
+      {q:'What can be inferred about the student’s attitude at the end of the conversation?', opts:['She is still undecided','She disagrees with the advisor','She finds the advisor’s suggestion helpful','She plans to see a different advisor'], a:2}
+    ]
+  },
+  {
+    type:'listen-announcement', id:'l3', eyebrow:'Listening · Task 3 of 4',
+    title:'Listen to an Announcement', tag2:'Recreation Center',
+    instructions:'Listen to the announcement, then answer the questions. Audio plays once.',
+    script:"Attention, Recreation Center members: due to a scheduled maintenance inspection of the filtration system, the main pool will be closed this Saturday from 6 a.m. until 2 p.m. The therapy pool and the fitness areas will remain open as usual during this time. Members with scheduled swim lessons this Saturday morning will be contacted individually to reschedule. We apologize for the inconvenience and expect the main pool to reopen at 2 p.m. with normal hours resuming Sunday.",
+    questions:[
+      {q:'Why is the main pool closing?', opts:['A special swim event','A filtration system inspection','A staffing shortage','Renovation of the locker rooms'], a:1},
+      {q:'Which areas will remain open during the closure?', opts:['Only the fitness area','Only the therapy pool','The therapy pool and fitness areas','Nothing will remain open'], a:2},
+      {q:'What will happen to members with Saturday morning swim lessons?', opts:['Lessons are automatically canceled for the month','They will be contacted individually to reschedule','They can use the therapy pool instead, no changes needed','Lessons will move to Sunday automatically'], a:1}
+    ]
+  },
+  {
+    type:'listen-lecture', id:'l4', eyebrow:'Listening · Task 4 of 4',
+    title:'Listen to an Academic Talk', tag2:'Psychology — The Forgetting Curve',
+    instructions:'Listen to the talk, then answer the questions. Audio plays once.',
+    script:"Professor: Today I want to talk about something called the forgetting curve, first described by the psychologist Hermann Ebbinghaus in the 1880s. Ebbinghaus essentially experimented on himself, memorizing lists of meaningless syllables and then testing his own recall after different time intervals — twenty minutes, one hour, one day, a week, and so on. What he found was that forgetting happens fastest immediately after learning, and then the rate slows down considerably. So within the first hour, you might lose over half of what you just learned, but what remains after a day tends to decay much more slowly after that.\n\nNow, here's the part that's actually useful for students: Ebbinghaus also found that each time you review the material — especially right around the point where you're about to forget it — the curve resets and flattens. Review it enough times at the right intervals, and the information becomes much more durable, requiring less frequent review over time. This is the basic principle behind what's now called spaced repetition, which is why cramming the night before an exam is so much less effective than reviewing material in short sessions spread out over several days or weeks.",
+    questions:[
+      {q:'What method did Ebbinghaus use in his original research?', opts:['He studied large groups of students','He tested his own memory using lists of meaningless syllables','He surveyed people about their study habits','He used brain imaging technology'], a:1},
+      {q:'According to the talk, when does forgetting happen fastest?', opts:['A week after learning','Immediately after learning','Only after several months','It happens at a constant rate'], a:1},
+      {q:'What happens each time material is reviewed near the point of forgetting?', opts:['The forgetting curve resets and flattens','The material is forgotten faster next time','Nothing measurable changes','The information is permanently lost'], a:0},
+      {q:'What practical technique is based on this principle?', opts:['Cramming the night before an exam','Spaced repetition','Studying only new material','Group study sessions'], a:1}
+    ]
+  }
+],
+
+listeningM2Hard: {
+  type:'listen-lecture', id:'l-hard', tag:'hard', eyebrow:'Listening · Module 2',
+  title:'Listen to an Academic Talk (Higher Level)', tag2:'Statistics — Survivorship Bias',
+  instructions:'Listen to the talk, then answer the questions. Audio plays once.',
+  script:"Professor: During the Second World War, statistician Abraham Wald was asked to help the military decide where to add armor to returning bomber planes. Engineers had examined planes that came back from missions and mapped out where the bullet holes were concentrated — mostly on the wings, the tail, and the fuselage — and the initial instinct was to reinforce exactly those areas.\n\nWald argued the opposite: reinforce the areas with the fewest bullet holes, particularly the engines. His reasoning was that the data only included planes that survived and made it back. Planes that were hit in the engine were presumably far more likely to be shot down and never return at all, so their damage patterns were invisible to the researchers. The bullet holes on returning planes showed where a plane could be hit and still survive, not where hits were most dangerous.\n\nThis is now a classic example of survivorship bias — the error of drawing conclusions from a data set that has already been filtered by some selection process, while overlooking the cases that didn't survive that process to be observed at all. The same logical error shows up in many other contexts, for instance when people study only successful companies to determine what makes companies succeed, ignoring the far larger number of similar companies that failed and are no longer around to study.",
+  questions:[
+    {q:'What did engineers initially recommend based on the bullet-hole data?', opts:['Reinforcing the engines only','Reinforcing the wings, tail, and fuselage','Removing armor entirely','Reinforcing the cockpit only'], a:1},
+    {q:'Why did Wald argue for reinforcing the engines instead?', opts:['Engines were statistically shown to be hit most often','Planes hit in the engine likely never returned, so that damage was unobserved','Engines were cheaper to reinforce','The military required it regardless of data'], a:1},
+    {q:'What is survivorship bias, as defined in the talk?', opts:['A bias toward studying only military data','Drawing conclusions from a data set that excludes cases that did not survive a selection process','A statistical method for filtering outliers','The tendency of researchers to prefer positive results'], a:1},
+    {q:'What other example of survivorship bias does the professor mention?', opts:['Studying failed companies only','Studying only successful companies to explain success, ignoring failed ones','Comparing military and civilian aircraft','Analyzing weather patterns over time'], a:1}
+  ]
+},
+listeningM2Easy: {
+  type:'listen-conversation', id:'l-easy', tag:'easy', eyebrow:'Listening · Module 2',
+  title:'Listen to a Conversation (Standard Level)', tag2:'Roommates and Chores',
+  instructions:'Listen to the conversation, then answer the questions. Audio plays once.',
+  script:"Jordan: Hey, can we talk about the chore schedule? I feel like I've been doing the dishes almost every night this week.\nCasey: Oh, sorry — I've had a lot of exams this week, that's on me. Let's split it differently going forward?\nJordan: Yeah, maybe we alternate weeks instead of splitting by day? That might be simpler to remember.\nCasey: That works for me. So I'll take dishes this week since you've already done so much, and you can take out the trash and recycling instead?\nJordan: Sounds fair. Should we write it on the calendar on the fridge so we don't forget whose week it is?\nCasey: Good idea, I'll do that today.",
+  questions:[
+    {q:'Why does Jordan bring up the chore schedule?', opts:['To complain about Casey in general','Because Jordan has been doing the dishes most nights','Because the apartment is very messy','To ask Casey to move out'], a:1},
+    {q:'Why has Casey not been doing the dishes?', opts:['Casey does not like doing dishes','Casey has had a lot of exams this week','Casey was out of town','Casey forgot the schedule existed'], a:1},
+    {q:'What new system do they agree on?', opts:['Splitting every chore exactly in half daily','Alternating chores by week','Hiring outside help','Doing chores only on weekends'], a:1},
+    {q:'What will Casey do today?', opts:['Do all the dishes for a month','Write the schedule on the calendar','Buy a new calendar','Call a roommate meeting'], a:1}
+  ]
+},
+
+speaking: {
+  listenRepeat: {
+    eyebrow:'Speaking · Task 1', title:'Listen and Repeat',
+    instructions:'You will hear a sentence once. After it finishes, record yourself repeating it as accurately as you can. You will have a few seconds to respond after each sentence.',
+    items:[
+      "The library extended its hours during final exam week.",
+      "She couldn't find her keys, so she was late to the meeting.",
+      "Renewable energy sources are becoming more affordable every year.",
+      "If it rains tomorrow, the outdoor concert will be postponed.",
+      "He has been studying French for almost three years now.",
+      "The committee will announce its decision by the end of the month.",
+      "Despite the traffic, they arrived just in time for the show."
+    ]
+  },
+  interview: {
+    eyebrow:'Speaking · Task 2', title:'Take an Interview', tag2:'Studying Abroad',
+    instructions:'You will hear four questions about a familiar topic, one at a time. There is no preparation time — begin speaking as soon as each question ends. You will have 45 seconds to respond to each question.',
+    questions:[
+      "Have you ever considered studying in another country? Why or why not?",
+      "What do you think is the biggest challenge students face when studying abroad?",
+      "Describe a skill or experience someone could gain from studying abroad that would be hard to get at home.",
+      "If a friend asked for your advice about studying abroad for a year, what would you tell them?"
+    ]
+  }
+},
+
+writing: {
+  buildSentence: {
+    eyebrow:'Writing · Task 1', title:'Build a Sentence',
+    instructions:'Arrange the word groups below into a single grammatically correct sentence. Click a chip to add it to the sentence; click it again in the sentence area to remove it.',
+    chips:["Although the experiment failed twice,", "the research team", "did not abandon", "their hypothesis."],
+    correctOrder:[0,1,2,3]
+  },
+  email: {
+    eyebrow:'Writing · Task 2', title:'Write an Email',
+    prompt:"You have a final exam scheduled for the same date and time as a family event you already committed to before the exam date was announced. Write an email to your professor explaining the conflict and requesting an alternative arrangement, such as a makeup exam. Your email should be polite, clearly explain the situation, and propose a reasonable solution.",
+    timeMin:7, minWords:80
+  },
+  discussion: {
+    eyebrow:'Writing · Task 3', title:'Academic Discussion',
+    prompt:"Your professor is leading an online class discussion. Read the discussion topic and the professor's question, then read your classmates' responses. Write a response that contributes your own idea to the discussion.",
+    profQuestion:"Some cities have proposed making public transportation free for university students, funded through city or university budgets. Do you think this is a good policy? Why or why not?",
+    classmates:[
+      {name:'Adaeze', text:'I think it’s a great idea — it would reduce traffic congestion around campus and make it easier for students who can’t afford a car to get to internships or part-time jobs across the city.'},
+      {name:'Marco', text:'I see the appeal, but I worry about where the funding comes from. If it comes out of the university budget, that money might otherwise go toward things like financial aid or facilities.'}
+    ],
+    timeMin:10, minWords:100
+  }
+}
+
+};
+
+const ANSWER_KEYS = {
+  r2:[1,2,2,2], r3:[2,1,1,1,1],
+  'r-hard':[1,1,1,0,0], 'r-easy':[1,1,1,1],
+  l1:[0], l2:[1,1,1,2], l3:[1,2,1], l4:[1,1,0,1],
+  'l-hard':[1,1,1,1], 'l-easy':[1,1,1,1]
+};
+
+/* ============================= STATE ============================= */
+const state = {
+  step: 'welcome',
+  idx: 0,
+  answers: {},
+  readingM1Score: 0, readingM1Total: 0,
+  listeningM1Score: 0, listeningM1Total: 0,
+  readingBranch: null, listeningBranch: null,
+  timerId: null, timeLeft: 0,
+  audioPlayed: {},
+  recordings: {},
+  mediaRecorder: null, mediaChunks: [], recStream: null,
+  sequence: []
+};
+
+/* ============================= SEQUENCE BUILDER ============================= */
+function buildSequence(){
+  const seq = [];
+  CONTENT.readingM1.forEach(item => seq.push({phase:'reading-m1', item}));
+  seq.push({phase:'reading-branch-gate'});
+  seq.push({phase:'reading-m2'});
+  CONTENT.listeningM1.forEach(item => seq.push({phase:'listening-m1', item}));
+  seq.push({phase:'listening-branch-gate'});
+  seq.push({phase:'listening-m2'});
+  seq.push({phase:'speaking-repeat'});
+  seq.push({phase:'speaking-interview'});
+  seq.push({phase:'writing-sentence'});
+  seq.push({phase:'writing-email'});
+  seq.push({phase:'writing-discussion'});
+  seq.push({phase:'results'});
+  return seq;
+}
+
+/* ============================= TTS ENGINE ============================= */
+function speakLines(text, onend){
+  window.speechSynthesis.cancel();
+  const lines = Array.isArray(text) ? text : [text];
+  let i = 0;
+  function next(){
+    if(i >= lines.length){ if(onend) onend(); return; }
+    const u = new SpeechSynthesisUtterance(lines[i]);
+    u.rate = 0.98; u.pitch = 1; u.lang = 'en-US';
+    u.onend = ()=>{ i++; next(); };
+    u.onerror = ()=>{ i++; next(); };
+    window.speechSynthesis.speak(u);
+  }
+  next();
+}
+function stopSpeaking(){ window.speechSynthesis.cancel(); }
+
+/* ============================= MIC RECORDING ============================= */
+async function startRecording(onData){
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+    state.recStream = stream;
+    const chunks = [];
+    const mr = new MediaRecorder(stream);
+    mr.ondataavailable = e => { if(e.data.size>0) chunks.push(e.data); };
+    mr.onstop = ()=>{
+      const blob = new Blob(chunks, {type:'audio/webm'});
+      stream.getTracks().forEach(t=>t.stop());
+      if(onData) onData(blob);
+    };
+    mr.start();
+    state.mediaRecorder = mr;
+    return true;
+  }catch(err){
+    console.warn('Mic unavailable', err);
+    return false;
+  }
+}
+function stopRecording(){
+  if(state.mediaRecorder && state.mediaRecorder.state !== 'inactive'){
+    state.mediaRecorder.stop();
+  }
+}
+
+/* ============================= TIMER ============================= */
+function startCountdown(seconds, onTick, onDone){
+  clearInterval(state.timerId);
+  state.timeLeft = seconds;
+  updateTimerDisplay();
+  state.timerId = setInterval(()=>{
+    state.timeLeft--;
+    updateTimerDisplay();
+    if(onTick) onTick(state.timeLeft);
+    if(state.timeLeft <= 0){
+      clearInterval(state.timerId);
+      if(onDone) onDone();
+    }
+  },1000);
+}
+function stopCountdown(){ clearInterval(state.timerId); document.getElementById('timerDisplay').textContent = '—:—'; document.getElementById('timerDisplay').classList.remove('low'); }
+function updateTimerDisplay(){
+  const el = document.getElementById('timerDisplay');
+  const m = Math.floor(state.timeLeft/60), s = state.timeLeft%60;
+  el.textContent = `${m}:${s.toString().padStart(2,'0')}`;
+  el.classList.toggle('low', state.timeLeft <= 30 && state.timeLeft > 0);
+}
+
+/* ============================= DOWNLOAD HELPER ============================= */
+async function saveFile(filename, content, mime){
+  try{
+    if(window.claude && window.claude.downloadFile){
+      await window.claude.downloadFile(filename, content, mime);
+      return true;
+    }
+  }catch(e){ console.warn('downloads capability unavailable', e); }
+  try{
+    const blob = content instanceof Blob ? content : new Blob([content], {type:mime||'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = filename;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    return true;
+  }catch(e){ console.error('manual download failed', e); return false; }
+}
+
+/* ============================= RENDER HELPERS ============================= */
+const app = document.getElementById('app');
+const footerNav = document.getElementById('footerNav');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const footerCenter = document.getElementById('footerCenter');
+
+function setProgress(label, pct){
+  document.getElementById('progressText').textContent = label;
+  document.getElementById('progressPct').textContent = Math.round(pct)+'%';
+  document.getElementById('progressFill').style.width = pct+'%';
+}
+function setSectionLabel(t){ document.getElementById('sectionLabel').textContent = t; }
+
+function el(tag, cls, html){
+  const e = document.createElement(tag);
+  if(cls) e.className = cls;
+  if(html !== undefined) e.innerHTML = html;
+  return e;
+}
+
+/* ============================= WELCOME ============================= */
+function renderWelcome(){
+  footerNav.style.display = 'none';
+  setSectionLabel('Welcome'); setProgress('Not started', 0);
+  app.innerHTML = '';
+  const c = el('div','card');
+  c.innerHTML = `
+    <span class="eyebrow">Full-Length Practice</span>
+    <h1 class="hero">TOEFL iBT® Mock Test</h1>
+    <p class="lead">This simulates the current TOEFL iBT test format (effective January 2026): four sections, no break, taken in order — Reading, Listening, Speaking, then Writing. Reading and Listening are <b>adaptive</b>: your performance on Module 1 of each section automatically determines whether you receive a Higher Level or Standard Level Module 2, just like the real test.</p>
+    <div class="welcome-grid">
+      <div class="wcard"><div class="t">Reading</div><div class="m">~27 min · adaptive</div></div>
+      <div class="wcard"><div class="t">Listening</div><div class="m">~27 min · adaptive</div></div>
+      <div class="wcard"><div class="t">Speaking</div><div class="m">~8 min · mic required</div></div>
+      <div class="wcard"><div class="t">Writing</div><div class="m">~23 min</div></div>
+    </div>
+    <p class="sub"><b>Before you start:</b> use headphones or speakers for the audio sections, and allow microphone access when prompted for Speaking. Audio plays only once per item, matching the real test. Your responses and recordings can be saved to your device as a study record at the end — nothing is uploaded or sent anywhere.</p>
+    <div class="center" style="margin-top:22px;">
+      <button class="btn-primary" id="startBtn" style="font-size:16px; padding:13px 28px;">Begin Test →</button>
+    </div>
+  `;
+  app.appendChild(c);
+  document.getElementById('startBtn').onclick = ()=>{
+    state.sequence = buildSequence();
+    state.idx = 0;
+    footerNav.style.display = 'flex';
+    renderStep();
+  };
+}
+
+/* ============================= SECTION TIMERS ============================= */
+const GROUP_DURATIONS = { reading: 27*60, listening: 27*60, writingEmail: 7*60, writingDiscussion: 10*60 };
+const PHASE_GROUP = {
+  'reading-m1':'reading', 'reading-branch-gate':'reading', 'reading-m2':'reading',
+  'listening-m1':'listening', 'listening-branch-gate':'listening', 'listening-m2':'listening',
+  'writing-email':'writingEmail', 'writing-discussion':'writingDiscussion'
+};
+function syncGroupTimer(phase){
+  const group = PHASE_GROUP[phase] || null;
+  if(group === state.timerGroup) return; // same section — let the running countdown keep going
+  stopCountdown();
+  state.timerGroup = group;
+  if(group && GROUP_DURATIONS[group]){
+    startCountdown(GROUP_DURATIONS[group], null, null);
+  }
+}
+
+/* ============================= MAIN STEP RENDERER ============================= */
+function renderStep(){
+  stopSpeaking();
+  const step = state.sequence[state.idx];
+  const pct = (state.idx/(state.sequence.length-1))*100;
+  window.scrollTo({top:0, behavior:'instant'});
+  if(!step){ return; }
+  syncGroupTimer(step.phase);
+
+  if(step.phase === 'reading-m1'){ setSectionLabel('Reading — Module 1'); setProgress(`Reading Module 1 — Item ${CONTENT.readingM1.indexOf(step.item)+1} of ${CONTENT.readingM1.length}`, pct); renderPassageTask(step.item, 'reading'); return; }
+  if(step.phase === 'reading-branch-gate'){ scoreReadingM1(); renderBranchGate('Reading', state.readingBranch); return; }
+  if(step.phase === 'reading-m2'){ const item = state.readingBranch==='hard' ? CONTENT.readingM2Hard : CONTENT.readingM2Easy; setSectionLabel('Reading — Module 2'); setProgress('Reading Module 2', pct); renderPassageTask(item, 'reading'); return; }
+
+  if(step.phase === 'listening-m1'){ setSectionLabel('Listening — Module 1'); setProgress(`Listening Module 1 — Item ${CONTENT.listeningM1.indexOf(step.item)+1} of ${CONTENT.listeningM1.length}`, pct); renderListenTask(step.item); return; }
+  if(step.phase === 'listening-branch-gate'){ scoreListeningM1(); renderBranchGate('Listening', state.listeningBranch); return; }
+  if(step.phase === 'listening-m2'){ const item = state.listeningBranch==='hard' ? CONTENT.listeningM2Hard : CONTENT.listeningM2Easy; setSectionLabel('Listening — Module 2'); setProgress('Listening Module 2', pct); renderListenTask(item); return; }
+
+  if(step.phase === 'speaking-repeat'){ setSectionLabel('Speaking — Listen and Repeat'); setProgress('Speaking Task 1', pct); renderListenRepeat(); return; }
+  if(step.phase === 'speaking-interview'){ setSectionLabel('Speaking — Take an Interview'); setProgress('Speaking Task 2', pct); renderInterview(); return; }
+
+  if(step.phase === 'writing-sentence'){ setSectionLabel('Writing — Build a Sentence'); setProgress('Writing Task 1', pct); renderBuildSentence(); return; }
+  if(step.phase === 'writing-email'){ setSectionLabel('Writing — Write an Email'); setProgress('Writing Task 2', pct); renderEmailTask(); return; }
+  if(step.phase === 'writing-discussion'){ setSectionLabel('Writing — Academic Discussion'); setProgress('Writing Task 3', pct); renderDiscussionTask(); return; }
+
+  if(step.phase === 'results'){ setSectionLabel('Test Complete'); setProgress('Complete', 100); renderResults(); return; }
+}
+
+/* ============================= READING / GENERIC PASSAGE ============================= */
+function renderPassageTask(item, kind){
+  footerCenter.innerHTML = '';
+  prevBtn.style.visibility = state.idx===0 ? 'hidden' : 'visible';
+  nextBtn.textContent = 'Next →'; nextBtn.disabled = false;
+
+  const c = el('div','card');
+  let head = `<span class="eyebrow">${item.eyebrow}</span>`;
+  if(item.tag) head += ` <span class="tag ${item.tag}">${item.tag==='hard'?'Higher Level':'Standard Level'}</span>`;
+  head += `<h2 class="section-title">${item.title}</h2><p class="sub">${item.instructions}</p>`;
+  c.innerHTML = head;
+
+  const passageDiv = el('div','passage');
+  item.passage.forEach((p,i)=>{
+    const para = el('p'); para.style.margin = i===0 ? '0 0 10px' : '0 0 12px';
+    if(i===0 && item.passage.length>1 && item.type!=='complete-words'){ para.style.fontWeight='700'; para.style.fontFamily="'Source Serif 4',serif"; para.style.fontSize='19px'; }
+    para.textContent = p;
+    passageDiv.appendChild(para);
+  });
+  c.appendChild(passageDiv);
+
+  if(item.type === 'complete-words'){
+    // Replace ___-marked words? Our text has partial letters directly (e.g. rese_rch). Build inputs.
+    passageDiv.innerHTML = '';
+    let blankIdx = 0;
+    item.passage.forEach((para, pi)=>{
+      const p = el('p'); p.style.margin = '0 0 12px';
+      const parts = para.split(/(\S*_\S*)/g);
+      parts.forEach(part=>{
+        if(part.includes('_')){
+          const wrap = document.createTextNode('');
+          const input = document.createElement('input');
+          input.type = 'text'; input.className='blankinput';
+          input.dataset.blankIndex = blankIdx;
+          input.placeholder = part.replace(/_/g,'•');
+          input.value = state.answers[item.id+'_b'+blankIdx] || '';
+          input.oninput = ()=>{ state.answers[item.id+'_b'+blankIdx] = input.value; };
+          blankIdx++;
+          p.appendChild(document.createTextNode(' '));
+          p.appendChild(input);
+          p.appendChild(document.createTextNode(' '));
+        } else if(part) {
+          p.appendChild(document.createTextNode(part));
+        }
+      });
+      passageDiv.appendChild(p);
+    });
+  } else {
+    item.questions.forEach((q, qi)=>{
+      const qb = el('div','qblock');
+      qb.innerHTML = `<div class="qnum">Question ${qi+1}</div><div class="qtext">${q.q}</div>`;
+      const optsWrap = el('div');
+      q.opts.forEach((opt, oi)=>{
+        const o = el('label','opt');
+        const key = item.id+'_q'+qi;
+        const checked = state.answers[key] === oi ? 'checked' : '';
+        if(state.answers[key]===oi) o.classList.add('selected');
+        o.innerHTML = `<input type="radio" name="${key}" value="${oi}" ${checked}><span>${opt}</span>`;
+        o.querySelector('input').onchange = ()=>{
+          state.answers[key] = oi;
+          [...optsWrap.children].forEach(x=>x.classList.remove('selected'));
+          o.classList.add('selected');
+        };
+        optsWrap.appendChild(o);
+      });
+      qb.appendChild(optsWrap);
+      c.appendChild(qb);
+    });
+  }
+
+  app.innerHTML = ''; app.appendChild(c);
+}
+
+/* ============================= SCORING ============================= */
+function scoreReadingM1(){
+  let correct = 0, total = 0;
+  ['r2','r3'].forEach(id=>{
+    const item = CONTENT.readingM1.find(x=>x.id===id);
+    const key = ANSWER_KEYS[id];
+    item.questions.forEach((q,qi)=>{
+      total++;
+      if(state.answers[id+'_q'+qi] === key[qi]) correct++;
+    });
+  });
+  state.readingM1Score = correct; state.readingM1Total = total;
+  state.readingBranch = (correct/total) >= 0.7 ? 'hard' : 'easy';
+}
+function scoreListeningM1(){
+  let correct = 0, total = 0;
+  CONTENT.listeningM1.forEach(item=>{
+    const key = ANSWER_KEYS[item.id];
+    item.questions.forEach((q,qi)=>{
+      total++;
+      if(state.answers[item.id+'_q'+qi] === key[qi]) correct++;
+    });
+  });
+  state.listeningM1Score = correct; state.listeningM1Total = total;
+  state.listeningBranch = (correct/total) >= 0.7 ? 'hard' : 'easy';
+}
+
+/* ============================= BRANCH GATE (auto, brief transition) ============================= */
+function renderBranchGate(sectionName, branch){
+  footerCenter.innerHTML = ''; prevBtn.style.visibility='hidden';
+  nextBtn.textContent = 'Continue →'; nextBtn.disabled = false;
+  const c = el('div','card');
+  const score = sectionName==='Reading' ? `${state.readingM1Score}/${state.readingM1Total}` : `${state.listeningM1Score}/${state.listeningM1Total}`;
+  c.innerHTML = `
+    <span class="eyebrow">${sectionName} · Module 1 Complete</span>
+    <h2 class="section-title">Module 1 scored automatically</h2>
+    <p class="sub">Just like the real adaptive test, your Module 1 performance determines your Module 2 difficulty. This routing happens instantly and is not shown to you during the real exam — it's shown here for teaching purposes.</p>
+    <div class="scorecard">
+      <div class="scorebox"><div class="n">${score}</div><div class="l">Module 1 Score</div></div>
+      <div class="scorebox"><div class="n" style="text-transform:capitalize;">${branch==='hard'?'Higher Level':'Standard Level'}</div><div class="l">Module 2 Assigned</div></div>
+    </div>
+    <p class="mini center">Continue to begin ${sectionName} Module 2.</p>
+  `;
+  app.innerHTML = ''; app.appendChild(c);
+}
+
+/* ============================= LISTENING TASKS ============================= */
+function renderListenTask(item){
+  footerCenter.innerHTML = '';
+  prevBtn.style.visibility = 'visible';
+  const played = !!state.audioPlayed[item.id];
+  nextBtn.textContent = 'Next →';
+  nextBtn.disabled = !played;
+
+  const c = el('div','card');
+  let head = `<span class="eyebrow">${item.eyebrow}</span>`;
+  if(item.tag) head += ` <span class="tag ${item.tag}">${item.tag==='hard'?'Higher Level':'Standard Level'}</span>`;
+  head += `<h2 class="section-title">${item.title}${item.tag2 ? ' — '+item.tag2 : ''}</h2><p class="sub">${item.instructions}</p>`;
+  c.innerHTML = head;
+
+  const audioPanel = el('div','audio-panel');
+  audioPanel.innerHTML = `
+    <div class="icon">🔊</div>
+    <div class="info"><b>${played ? 'Audio played' : 'Audio not yet played'}</b><span>${played ? 'You can replay for study purposes, but on the real test audio plays only once.' : 'Click play — this plays once, just like the real test.'}</span></div>
+    <button class="btn-gold" id="playBtn">${played ? '↻ Replay (study mode)' : '▶ Play Audio'}</button>
+  `;
+  c.appendChild(audioPanel);
+
+  const qArea = el('div');
+  if(!played){
+    qArea.innerHTML = `<p class="mini center" style="padding:20px 0;">Questions will appear after the audio finishes playing.</p>`;
+  } else {
+    item.questions.forEach((q, qi)=>{
+      const qb = el('div','qblock');
+      qb.innerHTML = `<div class="qnum">Question ${qi+1}</div><div class="qtext">${q.q}</div>`;
+      const optsWrap = el('div');
+      q.opts.forEach((opt, oi)=>{
+        const o = el('label','opt');
+        const key = item.id+'_q'+qi;
+        const checked = state.answers[key] === oi ? 'checked' : '';
+        if(state.answers[key]===oi) o.classList.add('selected');
+        o.innerHTML = `<input type="radio" name="${key}" value="${oi}" ${checked}><span>${opt}</span>`;
+        o.querySelector('input').onchange = ()=>{
+          state.answers[key] = oi;
+          [...optsWrap.children].forEach(x=>x.classList.remove('selected'));
+          o.classList.add('selected');
+        };
+        optsWrap.appendChild(o);
+      });
+      qb.appendChild(optsWrap);
+      qArea.appendChild(qb);
+    });
+  }
+  c.appendChild(qArea);
+  app.innerHTML = ''; app.appendChild(c);
+
+  document.getElementById('playBtn').onclick = ()=>{
+    document.getElementById('playBtn').disabled = true;
+    document.getElementById('playBtn').textContent = '▶ Playing…';
+    speakLines(item.script.split('\n'), ()=>{
+      state.audioPlayed[item.id] = true;
+      renderListenTask(item);
+    });
+  };
+}
+
+/* ============================= SPEAKING: LISTEN AND REPEAT ============================= */
+function renderListenRepeat(){
+  footerCenter.innerHTML = '';
+  prevBtn.style.visibility='visible';
+  const data = CONTENT.speaking.listenRepeat;
+  if(state.repeatIdx === undefined) state.repeatIdx = 0;
+  const i = state.repeatIdx;
+  const done = i >= data.items.length;
+  nextBtn.textContent = done ? 'Next →' : 'Skip Item';
+  nextBtn.disabled = false;
+
+  const c = el('div','card');
+  c.innerHTML = `<span class="eyebrow">${data.eyebrow}</span><h2 class="section-title">${data.title}</h2><p class="sub">${data.instructions}</p>`;
+
+  if(done){
+    c.innerHTML += `<p class="lead center" style="padding:20px 0;">✓ All ${data.items.length} items complete. Click Next to continue to the interview task.</p>`;
+    app.innerHTML=''; app.appendChild(c);
+    nextBtn.onclick = ()=>{ delete state.repeatIdx; goNext(); };
+    return;
+  }
+
+  const body = el('div');
+  body.innerHTML = `<p class="mini">Item ${i+1} of ${data.items.length}</p>`;
+  const audioPanel = el('div','audio-panel');
+  const recorded = !!state.recordings['repeat_'+i];
+  audioPanel.innerHTML = `
+    <div class="icon">🎧</div>
+    <div class="info"><b id="repeatStatus">Click play to hear the sentence</b><span>Then record yourself repeating it.</span></div>
+    <button class="btn-gold" id="repeatPlayBtn">▶ Play</button>
+  `;
+  body.appendChild(audioPanel);
+
+  const recPanel = el('div','audio-panel');
+  recPanel.innerHTML = `
+    <div class="icon">🎙️</div>
+    <div class="info"><b id="recStatus">${recorded ? 'Response recorded' : 'Not yet recorded'}</b><span id="recSub">Recording starts automatically after the audio finishes.</span></div>
+    <div id="recControls"></div>
+  `;
+  body.appendChild(recPanel);
+  c.appendChild(body);
+  app.innerHTML=''; app.appendChild(c);
+
+  document.getElementById('repeatPlayBtn').onclick = ()=>{
+    const btn = document.getElementById('repeatPlayBtn');
+    btn.disabled = true; document.getElementById('repeatStatus').textContent = 'Playing…';
+    speakLines(data.items[i], async ()=>{
+      document.getElementById('repeatStatus').textContent = 'Now recording your response…';
+      const ok = await startRecording(blob=>{
+        state.recordings['repeat_'+i] = blob;
+        document.getElementById('recStatus').textContent = 'Response recorded ✓';
+        document.getElementById('recSub').textContent = 'You can move to the next item.';
+      });
+      if(!ok){
+        document.getElementById('recSub').textContent = 'Microphone unavailable — skipping recording for this item.';
+        return;
+      }
+      startCountdown(4, (t)=>{
+        const sub = document.getElementById('recSub');
+        if(sub) sub.innerHTML = `<span class="rec-indicator"><span class="rec-dot"></span>Recording — ${t}s left</span>`;
+      }, ()=>{ stopRecording(); });
+      const sub0 = document.getElementById('recSub');
+      if(sub0) sub0.innerHTML = '<span class="rec-indicator"><span class="rec-dot"></span>Recording — 4s left</span>';
+    });
+  };
+
+  nextBtn.onclick = ()=>{
+    stopSpeaking(); stopRecording(); stopCountdown();
+    state.repeatIdx++;
+    renderListenRepeat();
+  };
+}
+
+/* ============================= SPEAKING: INTERVIEW ============================= */
+function renderInterview(){
+  footerCenter.innerHTML = '';
+  prevBtn.style.visibility='visible';
+  const data = CONTENT.speaking.interview;
+  if(state.interviewIdx === undefined) state.interviewIdx = 0;
+  const i = state.interviewIdx;
+  const done = i >= data.questions.length;
+  nextBtn.textContent = done ? 'Continue to Writing →' : 'Skip Question';
+
+  const c = el('div','card');
+  c.innerHTML = `<span class="eyebrow">${data.eyebrow}</span><h2 class="section-title">${data.title} — ${data.tag2}</h2><p class="sub">${data.instructions}</p>`;
+
+  if(done){
+    c.innerHTML += `<p class="lead center" style="padding:20px 0;">✓ All 4 interview questions complete.</p>`;
+    app.innerHTML=''; app.appendChild(c);
+    nextBtn.onclick = ()=>{ goNext(); };
+    return;
+  }
+
+  c.innerHTML += `<p class="mini">Question ${i+1} of ${data.questions.length}</p><div class="interview-q" id="interviewQ">Press play to hear the question</div>`;
+  const recPanel = el('div','audio-panel');
+  recPanel.innerHTML = `
+    <div class="icon">🎙️</div>
+    <div class="info"><b id="ivStatus">Not started</b><span id="ivSub">No preparation time — recording begins the instant the question ends.</span></div>
+    <button class="btn-gold" id="ivPlayBtn">▶ Play Question</button>
+  `;
+  c.appendChild(recPanel);
+  app.innerHTML=''; app.appendChild(c);
+
+  document.getElementById('ivPlayBtn').onclick = ()=>{
+    const btn = document.getElementById('ivPlayBtn');
+    btn.disabled = true;
+    document.getElementById('interviewQ').textContent = '🔊 Playing question…';
+    speakLines(data.questions[i], async ()=>{
+      document.getElementById('interviewQ').textContent = '"'+data.questions[i]+'"';
+      document.getElementById('ivStatus').textContent = 'Recording now — 45 seconds';
+      document.getElementById('ivSub').innerHTML = '<span class="rec-indicator"><span class="rec-dot"></span>Recording your response…</span>';
+      const ok = await startRecording(blob=>{
+        state.recordings['interview_'+i] = blob;
+        document.getElementById('ivStatus').textContent = 'Response recorded ✓';
+        document.getElementById('ivSub').textContent = 'Click Skip Question to continue.';
+      });
+      if(!ok){
+        document.getElementById('ivStatus').textContent = 'Microphone unavailable';
+        document.getElementById('ivSub').textContent = 'Skipping recording for this item.';
+        return;
+      }
+      startCountdown(45, null, ()=>{ stopRecording(); });
+    });
+  };
+
+  nextBtn.onclick = ()=>{
+    stopSpeaking(); stopRecording(); stopCountdown();
+    state.interviewIdx++;
+    renderInterview();
+  };
+}
+
+/* ============================= WRITING: BUILD A SENTENCE ============================= */
+function renderBuildSentence(){
+  footerCenter.innerHTML = '';
+  prevBtn.style.visibility='visible'; nextBtn.textContent='Next →'; nextBtn.disabled=false;
+  const data = CONTENT.writing.buildSentence;
+  if(!state.sentenceOrder) state.sentenceOrder = [];
+
+  const c = el('div','card');
+  c.innerHTML = `<span class="eyebrow">${data.eyebrow}</span><h2 class="section-title">${data.title}</h2><p class="sub">${data.instructions}</p>`;
+
+  const slot = el('div','sentence-slot'); slot.id='sentSlot';
+  const bank = el('div','wordbank'); bank.id='sentBank';
+
+  function renderChips(){
+    slot.innerHTML=''; bank.innerHTML='';
+    state.sentenceOrder.forEach(ci=>{
+      const chip = el('div','chip', data.chips[ci]);
+      chip.onclick = ()=>{ state.sentenceOrder = state.sentenceOrder.filter(x=>x!==ci); renderChips(); };
+      slot.appendChild(chip);
+    });
+    data.chips.forEach((text, ci)=>{
+      const used = state.sentenceOrder.includes(ci);
+      const chip = el('div','chip'+(used?' used':''), text);
+      if(!used) chip.onclick = ()=>{ state.sentenceOrder.push(ci); renderChips(); };
+      bank.appendChild(chip);
+    });
+  }
+  renderChips();
+  c.appendChild(el('p','mini','Your sentence:'));
+  c.appendChild(slot);
+  c.appendChild(el('p','mini','Available word groups:'));
+  c.appendChild(bank);
+  app.innerHTML=''; app.appendChild(c);
+}
+
+/* ============================= WRITING: EMAIL ============================= */
+function renderEmailTask(){
+  footerCenter.innerHTML = '';
+  prevBtn.style.visibility='visible'; nextBtn.textContent='Next →'; nextBtn.disabled=false;
+  const data = CONTENT.writing.email;
+  const c = el('div','card');
+  c.innerHTML = `<span class="eyebrow">${data.eyebrow}</span><h2 class="section-title">${data.title}</h2>
+    <p class="lead" style="background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:16px;">${data.prompt}</p>
+    <p class="mini">Suggested time: ${data.timeMin} minutes · Aim for at least ${data.minWords} words.</p>`;
+  const ta = el('textarea'); ta.id='emailArea'; ta.placeholder='Dear Professor …';
+  ta.value = state.answers.emailText || '';
+  const wc = el('div','wordcount'); wc.id='emailWC';
+  function updateWC(){ const n = ta.value.trim().split(/\s+/).filter(Boolean).length; wc.textContent = n + ' words'; state.answers.emailText = ta.value; }
+  ta.oninput = updateWC;
+  c.appendChild(ta); c.appendChild(wc); updateWC();
+  app.innerHTML=''; app.appendChild(c);
+}
+
+/* ============================= WRITING: DISCUSSION ============================= */
+function renderDiscussionTask(){
+  footerCenter.innerHTML = '';
+  prevBtn.style.visibility='visible'; nextBtn.textContent='Finish Test →'; nextBtn.disabled=false;
+  const data = CONTENT.writing.discussion;
+  const c = el('div','card');
+  c.innerHTML = `<span class="eyebrow">${data.eyebrow}</span><h2 class="section-title">${data.title}</h2><p class="sub">${data.prompt}</p>
+    <div class="passage"><b>Professor:</b> ${data.profQuestion}</div>`;
+  const thread = el('ul','disc-thread');
+  data.classmates.forEach(cm=>{ thread.innerHTML += `<li><b>${cm.name}:</b> ${cm.text}</li>`; });
+  c.appendChild(thread);
+  c.appendChild(el('p','mini',`Suggested time: ${data.timeMin} minutes · Aim for at least ${data.minWords} words.`));
+  const ta = el('textarea'); ta.id='discArea'; ta.placeholder='Your response…';
+  ta.value = state.answers.discText || '';
+  const wc = el('div','wordcount');
+  function updateWC(){ const n = ta.value.trim().split(/\s+/).filter(Boolean).length; wc.textContent = n + ' words'; state.answers.discText = ta.value; }
+  ta.oninput = updateWC;
+  c.appendChild(ta); c.appendChild(wc); updateWC();
+  app.innerHTML=''; app.appendChild(c);
+}
+
+/* ============================= RESULTS ============================= */
+function renderResults(){
+  footerNav.style.display = 'none';
+  stopSpeaking(); stopCountdown();
+  const c = el('div','card');
+  const readingPct = Math.round((state.readingM1Score/state.readingM1Total)*100);
+  const listeningPct = Math.round((state.listeningM1Score/state.listeningM1Total)*100);
+  const recCount = Object.keys(state.recordings).length;
+  c.innerHTML = `
+    <span class="eyebrow">Test Complete</span>
+    <h1 class="hero">Nice work — you finished the full mock test.</h1>
+    <p class="lead">Here's a summary of your Module 1 performance and your responses. This is a practice-scoring summary for Module 1 selected-response items only — Speaking and Writing responses (and Module 2) require instructor or AI-assisted review, matching how the real TOEFL iBT scores those sections.</p>
+    <div class="scorecard">
+      <div class="scorebox"><div class="n">${state.readingM1Score}/${state.readingM1Total}</div><div class="l">Reading M1 (${readingPct}%) → ${state.readingBranch==='hard'?'Higher':'Standard'}</div></div>
+      <div class="scorebox"><div class="n">${state.listeningM1Score}/${state.listeningM1Total}</div><div class="l">Listening M1 (${listeningPct}%) → ${state.listeningBranch==='hard'?'Higher':'Standard'}</div></div>
+    </div>
+    <div class="scorecard">
+      <div class="scorebox"><div class="n">${recCount}</div><div class="l">Speaking Recordings Captured</div></div>
+      <div class="scorebox"><div class="n">${(state.answers.emailText||'').trim().split(/\s+/).filter(Boolean).length} / ${(state.answers.discText||'').trim().split(/\s+/).filter(Boolean).length}</div><div class="l">Email / Discussion Word Counts</div></div>
+    </div>
+    <div class="center" style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:22px;">
+      <button class="btn-primary" id="dlReportBtn">⬇ Save Full Report (.txt)</button>
+      <button class="btn-gold" id="dlRecordingsBtn">⬇ Save Recordings</button>
+      <button class="btn-ghost" id="restartBtn">↺ Restart Test</button>
+    </div>
+    <p class="mini center" style="margin-top:16px;">Nothing here is uploaded anywhere — files save directly to your own device.</p>
+
+    <div style="border-top:1px solid var(--line); margin-top:26px; padding-top:22px;">
+      <h2 class="section-title" style="font-size:19px;">Send results to your teacher</h2>
+      <p class="sub">This page has no server, so it can't send email or attach files on its own — a webpage is never allowed to email files silently, for your own security. Instead: enter the teacher's email, click the button below to download everything, and it opens a ready-made email draft in your mail app with the summary already written in. Just drag the downloaded report and audio files into that draft before hitting send.</p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:14px 0;">
+        <input type="email" id="teacherEmail" placeholder="teacher@example.com" style="flex:1; min-width:220px; padding:11px 14px; border:1px solid var(--line); border-radius:9px; background:var(--panel); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; font-size:14px;">
+        <button class="btn-primary" id="emailResultsBtn">✉ Download &amp; Draft Email</button>
+      </div>
+      <p class="mini" id="emailNote"></p>
+    </div>
+  `;
+  app.innerHTML=''; app.appendChild(c);
+
+  function buildReportText(){
+    const lines = [];
+    lines.push('TOEFL iBT 2026 — Full Mock Test Report');
+    lines.push('Generated: ' + new Date().toString());
+    lines.push('');
+    lines.push('=== READING ===');
+    lines.push(`Module 1 score: ${state.readingM1Score}/${state.readingM1Total} (${readingPct}%)`);
+    lines.push(`Module 2 assigned: ${state.readingBranch==='hard'?'Higher Level':'Standard Level'}`);
+    lines.push('');
+    lines.push('=== LISTENING ===');
+    lines.push(`Module 1 score: ${state.listeningM1Score}/${state.listeningM1Total} (${listeningPct}%)`);
+    lines.push(`Module 2 assigned: ${state.listeningBranch==='hard'?'Higher Level':'Standard Level'}`);
+    lines.push('');
+    lines.push('=== SPEAKING ===');
+    lines.push(`Recordings captured: ${recCount} (Listen and Repeat: up to 7, Interview: up to 4)`);
+    lines.push('(Audio files saved separately — see recordings download)');
+    lines.push('');
+    lines.push('=== WRITING ===');
+    lines.push('--- Build a Sentence ---');
+    lines.push((state.sentenceOrder||[]).map(i=>CONTENT.writing.buildSentence.chips[i]).join(' '));
+    lines.push('');
+    lines.push('--- Email ---');
+    lines.push(state.answers.emailText || '(no response entered)');
+    lines.push('');
+    lines.push('--- Academic Discussion ---');
+    lines.push(state.answers.discText || '(no response entered)');
+    return lines.join('\n');
+  }
+
+  async function downloadReport(){ await saveFile('TOEFL_2026_MockTest_Report.txt', buildReportText(), 'text/plain'); }
+  async function downloadRecordings(){
+    const keys = Object.keys(state.recordings);
+    for(const k of keys){
+      await saveFile(`TOEFL_2026_speaking_${k}.webm`, state.recordings[k], 'audio/webm');
+    }
+    return keys.length;
+  }
+
+  document.getElementById('dlReportBtn').onclick = downloadReport;
+
+  document.getElementById('dlRecordingsBtn').onclick = async ()=>{
+    const n = await downloadRecordings();
+    if(n===0) alert('No recordings were captured this session.');
+  };
+
+  document.getElementById('emailResultsBtn').onclick = async ()=>{
+    const emailInput = document.getElementById('teacherEmail');
+    const note = document.getElementById('emailNote');
+    const to = emailInput.value.trim();
+    if(!to || !to.includes('@')){
+      note.textContent = 'Enter a valid email address first.';
+      note.style.color = 'var(--bad)';
+      return;
+    }
+    note.style.color = 'var(--sub)';
+    note.textContent = 'Downloading report and recordings…';
+    await downloadReport();
+    const n = await downloadRecordings();
+
+    const subject = 'TOEFL iBT 2026 Mock Test Results';
+    let body = buildReportText();
+    // mailto bodies are limited (~1800 chars is a safe cross-client ceiling) — truncate and point to the attachments.
+    const limit = 1500;
+    if(body.length > limit){
+      body = body.slice(0, limit) + '\n\n[Report truncated in email — see the attached TOEFL_2026_MockTest_Report.txt for the full text.]';
+    }
+    body += `\n\n(${n} audio recording${n===1?'':'s'} downloaded separately — attach the .webm file${n===1?'':'s'} from your downloads before sending.)`;
+
+    const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+
+    note.style.color = 'var(--good)';
+    note.textContent = `Downloaded the report and ${n} recording${n===1?'':'s'} — your email app should now open a draft to ${to}. Attach the downloaded files before sending.`;
+  };
+
+  document.getElementById('restartBtn').onclick = ()=>{
+    Object.keys(state).forEach(k=>{
+      if(!['timerId'].includes(k)) delete state[k];
+    });
+    Object.assign(state, {step:'welcome', idx:0, answers:{}, readingM1Score:0, readingM1Total:0, listeningM1Score:0, listeningM1Total:0, readingBranch:null, listeningBranch:null, timeLeft:0, audioPlayed:{}, recordings:{}, sequence:[]});
+    renderWelcome();
+  };
+}
+
+/* ============================= NAV ============================= */
+prevBtn.onclick = ()=>{
+  if(state.idx>0){ stopSpeaking(); stopRecording(); state.idx--; renderStep(); }
+};
+nextBtn.onclick = ()=>{ goNext(); };
+function goNext(){
+  stopSpeaking(); stopRecording();
+  if(state.idx < state.sequence.length-1){ state.idx++; renderStep(); }
+}
+
+/* ============================= INIT ============================= */
+renderWelcome();
+</script>
+</body>
+</html>
